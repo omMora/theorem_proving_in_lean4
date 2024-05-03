@@ -21,7 +21,7 @@ propositions, and introduce constructors to build new propositions
 from others.
 
 ```lean
-# def Implies (p q : Prop) : Prop := p → q
+-- def Implies (p q : Prop) : Prop := p → q
 #check And     -- Prop → Prop → Prop
 #check Or      -- Prop → Prop → Prop
 #check Not     -- Prop → Prop
@@ -38,9 +38,9 @@ We could then introduce, for each element ``p : Prop``, another type
 constant of such a type.
 
 ```lean
-# def Implies (p q : Prop) : Prop := p → q
-# structure Proof (p : Prop) : Type where
-#   proof : p
+-- def Implies (p q : Prop) : Prop := p → q
+-- structure Proof (p : Prop) : Type where
+--   proof : p
 #check Proof   -- Proof : Prop → Type
 
 axiom and_commutative (p q : Prop) : Proof (Implies (And p q) (And q p))
