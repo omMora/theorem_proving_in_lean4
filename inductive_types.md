@@ -489,7 +489,7 @@ section is that each constructor relies only on previously specified types.
 
 Notice that a type with multiple constructors is disjunctive: an
 element of ``Sum α β`` is either of the form ``inl a`` *or* of the
-form ``inl b``. A constructor with multiple arguments introduces
+form ``inr b``. A constructor with multiple arguments introduces
 conjunctive information: from an element ``Prod.mk a b`` of
 ``Prod α β`` we can extract ``a`` *and* ``b``. An arbitrary inductive type can
 include both features, by having any number of constructors, each of
